@@ -22,8 +22,7 @@ def update_event_dates(event_id, start, end, meta_updates):
 def delete_event(event_id):
     pass
 
-
-def main():
+def get_credentials():
     """Shows basic usage of the Google Calendar API.
     Prints the start and name of the next 10 events on the user's calendar.
     """
@@ -76,6 +75,10 @@ def main():
 
     except HttpError as error:
         print(f"An error occurred: {error}")
+
+def main():
+    get_credentials()
+    
 
 if __name__ == "__main__":
     main()
